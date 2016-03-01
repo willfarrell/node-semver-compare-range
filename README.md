@@ -1,4 +1,11 @@
-# semver compare 
+# semver compare
+
+[![Build Status](https://travis-ci.org/willfarrell/node-semver-compare-range.svg?branch=master)](https://travis-ci.org/willfarrell/node-semver-compare-range)
+[![Dependency Status](https://gemnasium.com/willfarrell/node-semver-compare-range.svg)](https://gemnasium.com/willfarrell/node-semver-compare-range)
+[![Coverage Status](https://coveralls.io/repos/github/willfarrell/node-semver-compare-range/badge.svg?branch=master)](https://coveralls.io/github/willfarrell/node-semver-compare-range?branch=master)
+
+[![NPM](https://nodei.co/npm/semver-compare-range.png)](https://nodei.co/npm/semver-compare-range/)
+
 Compare two semver version or version range strings, returning -1,0,1. To be used by passing into `[].sort()`. Developed to order versioned sql files to ensure proper order of execution.
 
 ## Example
