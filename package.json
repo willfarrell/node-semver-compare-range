@@ -1,0 +1,36 @@
+{
+	"name": "semver-compare-range",
+	"version": "0.0.1",
+	"description": "Compare two semver version or version range strings.",
+	"copyright": "Copyright (c) 2016 will Farrell. All rights reserved.",
+	"license": "MIT",
+	"author": [
+		"will Farrell <iam@willfarrell.ca>"
+	],
+	"engines": {
+		"node": ">=0.10.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/willfarrell/node-semver-compare-range"
+	},
+	"main":"index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"sort",
+		"semver",
+		"sort semver"
+	],
+	"dependencies":{
+		"semver":"^5.1.0"
+	}, "devDependencies": {
+		"istanbul": "*",
+		"mocha": "*",
+		"chai": "*"
+	},
+	"scripts": {
+		"test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test.js"
+	}
+}
