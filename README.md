@@ -5,14 +5,25 @@ Compare two semver version or version range strings, returning -1,0,1. To be use
 ```javascript
 var cmp = require('semver-compare-all');
 var versions = [
-    '1.2.3'
+    '1.0.0',
+    '0.0.1 - 0.0.9',
+    '1.1.0 - 1.1.0',
+    '0.0.0 - 0.0.1',
+    '0.0.0',
+    '0.0.9 - 1.0.0',
 ];
 console.log(versions.sort(cmp).join('\n'));
 ```
 
 ### Example Return
 ```
-1.2.3
+0.0.0
+0.0.0 - 0.0.1
+0.0.1 - 0.0.9
+0.0.9 - 1.0.0
+1.0.0
+1.0.0 - 1.1.0
+
 ```
 
 ## Methods
