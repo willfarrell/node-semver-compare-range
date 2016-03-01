@@ -1,10 +1,20 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "0.12"
-  - "4"
-  - "5"
+- '0.10'
+- '0.12'
+- '4'
+- '5'
 before_install:
-  - npm install -g npm
+- npm install -g npm
 install: npm install
 script: npm run travis-ci
+deploy:
+  api_key: 
+  email: will.farrell@gmail.com
+  provider: npm
+  on:
+    branch: master
+    tags: true
+env:
+  global:
+    secure: DADLlMp1l7CP5IVPAgeZlvFdSxJaFSWbPe0SKzO16kRaooQzQ00F89Ex6uEqsivisGNhZMmGH6NhIr9QEbAuCbc0GNay3f+3g4xOlAIEEj7ae8HR3doFScbMQRP//09exJgwpSjYfJFOWIRhtbMJPcauCF2tJ97EXM/Gr5AP7dIeSff3Hnew/xQPSMqfzloK81HLCY0m/5+wblKHBWozsp6ZFJ0435BSW6Cll5sdc48IAEPxgghcgGR7OyppzokgOQqPcFg/Mn7uQtVUr71qTH2jBq1YCTtc7qP8ZJxGvEVARutdNGeCGvWesGZCMknAeprzx1l1iw+zRZVMer73CK8HoP6eBlrJkBAlOXAu8JPFyEgFAUTd0JrSwr2yk03MxuR3onn6sJlqdo8HXVNIs7BZ2BRna8TBebQixekCgwCWFLD2vkWP0/AQlz0hOAfd1DXxhZKybt3ggty2TAZMMHP2St5eD5+rVx6vADPev67u9pVimee+jdz3hXgLFY6uXocRAOl04gGATDNzeMsZhDS28IyBbfCDxHxph0UCDWyfahhPo2r8ZNaheK9CDH53CB6n37HWLLxCyC4FR62gR7JszxsARSbNNkDAYAUDLnNOUG+/p8KmiTmM+X5G6fWoOJDIwjSyPPf4KxC5KeoW9709vLfbjZybBu3Kmdli1EM=
