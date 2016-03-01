@@ -27,10 +27,13 @@
 		"semver":"^5.1.0"
 	}, "devDependencies": {
 		"istanbul": "*",
+		"coveralls": "*",
+		"mocha-lcov-reporter": "*",
 		"mocha": "*",
 		"chai": "*"
 	},
 	"scripts": {
-		"test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test.js"
+		"test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test.js",
+		"travis-ci": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage"
 	}
 }
