@@ -89,11 +89,15 @@ describe('semver compare', function() {
 
 	describe('any version is first', function() {
 		it('* vs b = -1', function (done) {
-			should.equal(compare('', '0.0.0'), -1);
+			should.equal(compare('*', '0.0.0'), -1);
 			done();
 		});
 		it('a vs * = 1', function (done) {
-			should.equal(compare('0.0.0', '*'), 1);
+			should.equal(compare('0.0.0', ''), 1);
+			done();
+		});
+		it('>=a vs * = 1', function (done) {
+			should.equal(compare('>=0.0.0', '*'), 1);
 			done();
 		});
 	});

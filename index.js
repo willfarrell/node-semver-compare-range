@@ -36,6 +36,9 @@ module.exports = function (a, b) {
 		} else if (bValid = semver.valid(b)) {
 			return -1*single_vs_range(b,a,aValidRange);
 		} else if (bValidRange = semver.validRange(b)) {
+			if (bValidRange === '*') {
+				return 1;
+			}
 			bValidRange = semver.validRange(b);
 			arange = aValidRange.replace(/[<>=]/g,'').split(' ');
 			amin = arange[0];

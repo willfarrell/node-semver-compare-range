@@ -10,7 +10,7 @@ Compare two semver version or version range strings, returning -1,0,1. To be use
 
 ## Example
 ```javascript
-var cmp = require('semver-compare-all');
+var cmp = require('semver-compare-range');
 var versions = [
     '1.0.0',
     '0.0.1 - 0.0.9',
