@@ -1,6 +1,6 @@
 {
 	"name": "semver-compare-range",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Compare two semver version or version range strings.",
 	"copyright": "Copyright (c) 2016 will Farrell. All rights reserved.",
 	"license": "MIT",
